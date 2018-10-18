@@ -16,7 +16,8 @@
   $(function() {
     $('form').submit(function(event) {
       event.preventDefault();
-      alert("we r hack3rz");
+      var values = $(this).serialize();
+      var posting = $.post('/posts', values);
     });
   });
 </script>
