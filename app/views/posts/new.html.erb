@@ -18,6 +18,9 @@
       event.preventDefault();
       var values = $(this).serialize();
       var posting = $.post('/posts', values);
+      posting.done(function(data) {
+        // todo: handle response
+      });
     });
   });
 </script>
