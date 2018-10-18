@@ -24,8 +24,8 @@
       var values = $(this).serialize();
       var posting = $.post('/posts', values);
       posting.done(function(data) {
-        // todo: handle response
-        console.log(data);
+        $("#postTitle").text(post["title"]);
+        $("#postBody").text(post["description"]);
       });
     });
   });
